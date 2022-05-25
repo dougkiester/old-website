@@ -158,7 +158,6 @@ textarea {
    .fullscreen-view {
      display: block;
      height: 100vh;
-     min-height: -webkit-fill-available;
      width: auto;
      /*background-color: rgb(255, 255, 255);*/
      
