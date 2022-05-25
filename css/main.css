@@ -1,0 +1,1200 @@
+/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+   @import url("https://use.typekit.net/onl1exw.css");
+   :root {
+     --dark-color: hsl(var(--hue), 100%, 9%);
+     --light-color: hsl(var(--hue), 95%, 98%);
+     --base: hsl(var(--hue), 95%, 50%);
+     --complimentary1: hsl(var(--hue-complimentary1), 95%, 50%);
+     --complimentary2: hsl(var(--hue-complimentary2), 95%, 50%);
+   
+     --font-family: 'Poppins', system-ui;
+     --header-height: 110px;
+     --bg-gradient: linear-gradient(
+       to bottom,
+       hsl(var(--hue), 95%, 99%),
+       hsl(var(--hue), 95%, 84%)
+
+     );
+     
+   }
+   
+   html {
+     scroll-behavior: smooth;
+     font-size: 100%;
+     line-height: 1.75;
+   }
+   
+   body {
+     height: 100vh;
+     width: 100vw;
+     margin: 0;
+     font-family: 'Acumin Pro', Helvetica, sans-serif;
+     overflow-x: hidden;
+   }
+   
+   p {margin-bottom: 1rem;}
+   
+   h1, h2, h3, h4, h5 {
+     margin: 3rem 0 1.38rem;
+     font-weight: 600;
+     /* line-height: 1.3; */
+   }
+   
+   h1 {
+     margin-top: 0;
+     font-size: 5.653rem;
+   }
+   
+   h2 {font-size: 3.998rem;}
+   
+   h3 {font-size: 2.827rem;}
+   
+   h4 {font-size: 1.999rem;}
+   
+   h5 {font-size: 1.414rem;}
+   
+   small, .text_small {font-size: 0.707rem;}
+   
+   h1 {
+     font-size: 75px;
+   }
+   
+   h2 {
+     font-size: 60px;
+   }
+   
+   h3 {
+     font-size: 40px;
+   }
+   
+   .fullscreen-view {
+     display: block;
+     height: 100vh;
+     min-height: -webkit-fill-available;
+     width: auto;
+     /*background-color: rgb(255, 255, 255);*/
+     
+   }
+   
+   /* Nav Bar */
+   
+   ul {
+     list-style-type: none;
+     margin: 0;
+     padding: 0;
+   }
+   
+   a {
+     text-decoration: none;
+   }
+   
+   .nav-container {
+     display: -webkit-box;
+     display: -ms-flexbox;
+     display: flex;
+   }
+   
+   .nav-container a {
+     -webkit-box-flex: 1;
+         -ms-flex: 1;
+             flex: 1;
+     color: black;
+     -webkit-box-pack: start;
+         -ms-flex-pack: start;
+             justify-content: flex-start;
+   }
+   
+   .nav-container nav {
+     display: -webkit-box;
+     display: -ms-flexbox;
+     display: flex;
+     -webkit-box-flex: 1;
+         -ms-flex: 1;
+             flex: 1;
+     -webkit-box-pack: center;
+         -ms-flex-pack: center;
+             justify-content: center;
+     -webkit-box-align: center;
+         -ms-flex-align: center;
+             align-items: center;
+   }
+   
+   .nav-container .social-header {
+     -webkit-box-flex: 1;
+         -ms-flex: 1;
+             flex: 1;
+     -webkit-box-pack: end;
+         -ms-flex-pack: end;
+             justify-content: flex-end;
+   }
+   
+   .social-header li {
+     align-content: center;
+   }
+   
+   .nav-container .hamburger-menu {
+     display: none;
+     -webkit-transition: all .5s ease-in-out;
+     transition: all .5s ease-in-out;
+   }
+   
+   .nav-container .hamburger-menu .hamburger-nav {
+     display: none;
+   }
+
+   #menuToggle
+{
+  display: none;
+  
+  position: relative;
+  top: 12px;
+  left: 0px;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a
+{
+  text-decoration: none;
+  color: #232323;
+  
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover
+{
+  color: tomato;
+}
+
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #cdcdcd;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu
+{
+  display: block !important;
+  position: absolute;
+  width: 139px;
+  margin: 0px;
+  padding: 50px;
+  padding-top: 125px;
+  left: -175px;
+  background: #fff;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 0% 0%;
+  transform: translate(100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+  height: 58px;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+   
+   header {
+     position: absolute;
+     box-sizing: border-box;
+     width: 100%;
+     z-index: 5;
+     /* background: white; */
+     padding: 30px;
+     background: rgba(255, 255, 255, 0.375);
+     box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
+     border: 1px solid rgba(255, 255, 255, 0.125);
+     height: var(--header-height);
+   }
+   
+   header img {
+     height: 24px;
+   }
+   
+   header ul {
+     display: -webkit-box;
+     display: -ms-flexbox;
+     display: flex;
+   }
+   
+   header ul a {
+     display: block;
+     padding: 0 1em;
+   }
+   
+   header h4 {
+     margin: 0;
+   }
+   
+   header a {
+     margin: 0;
+   }
+   
+   .social-header {
+     text-align: end;
+     
+   }
+   
+   .social-header img {
+     height: 24px;
+     padding: 0 10px;
+     margin-top: 12px;
+   }
+   
+   .hero-container {
+     width: 100%;
+     height: 100%;
+     display: flex;
+     justify-content: center;
+     align-content: center;
+   }
+   
+   .hero {
+     margin: 30px;
+     padding: 30px;
+     margin-top: auto;
+     margin-bottom: auto;
+     max-width: 700px;
+     height: 250px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+   }
+   
+   .hero h1 {
+     
+     margin: 0;
+     text-align: center;
+   }
+   
+   .hero h5 {
+     text-align: center;
+     font-weight: 400;
+     color: var(--dark-color);
+     margin-top: 0px;
+   }
+   
+   .down {
+     position: absolute;
+     width: 100%;
+     text-align: center;
+     bottom: 0;
+     padding-bottom: 10px;
+     z-index: 2;
+   }
+   .arrow-bg {
+     width: 100%;
+     height: 100px;
+     position: absolute;
+     background-color: white;
+     filter: blur(10px);
+     -webkit-filter: blur(10px);
+     transform: translateY(-5px);
+   }
+   
+   .page-content {
+     margin: 0 196px;
+   }
+   
+   .page-content section h2 {
+     
+     color: --bg-gradient;
+     
+   }
+   
+   .about-me {
+     padding: 2em;
+   }
+   
+   .about-me h2 {
+     
+     color: --dark-color;
+     
+   }
+   
+   /* Work Section */
+   
+   #work {
+     padding: 2em;
+     overflow: hidden;
+   }
+   
+   #work .box {
+     border-radius: 50px;
+     margin-bottom: 96px;
+     height: 400px;
+     background-repeat: no-repeat;
+     background-position: center;
+   }
+   
+   #work .text {
+     padding: 15px 20px;
+   }
+   
+   .content-text p {
+     color: white;
+     padding: 0;
+     margin: 10px;
+   }
+
+   .modal-body {
+     color: #000;
+     padding: 2rem !important;
+   }
+
+   .modal-body h4 {
+     margin-top: 1em;
+     color: #FDD943;
+   }
+
+   .modal-body h5  {
+     margin-top: 0;
+   }
+
+   .modal-body table {
+    border-style: solid;
+    border-width: 1px;
+   }
+
+   .modal-body tr {
+     border-width: 1px;
+   }
+
+   .modal-body td {
+    border-width: 1px;
+    padding: 8px;
+  }
+
+  .modal-body p {
+    color: var(--bs-gray-700)
+  }
+  
+  .swot {
+    display: inline-block;
+  }
+
+  .fancybox__container {
+    z-index: 2000 !important; 
+  }
+
+  .wireframes img {
+    width: 200px;
+    display: inline-block;
+  }
+
+  .wireframes .carousel__slide {
+    display: inline;
+  }
+   
+   .content-text h3 {
+     color: white;
+     padding: 0;
+     margin-top: 10px;
+     margin-left: 0px;
+     margin-bottom: 0;
+     
+   }
+   
+   .content-text h4 {
+     color: white;
+     padding: 0;
+     margin: 0 10px;
+   }
+   
+   .box-content {
+     display: flex;
+     padding: 48px;
+     height: 100%;
+     box-sizing: border-box;
+   }
+   
+   .btn {
+     display: inline-block;
+     font-weight: 400;
+     text-align: center;
+     white-space: nowrap;
+     color: white;
+     vertical-align: middle;
+     user-select: none;
+     border: 1px solid white;
+     padding: 0.375rem 0.75rem;
+     font-size: 1rem;
+     line-height: 1.5;
+     border-radius: 0.35rem;
+     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+   }
+
+   .modal-title {
+     margin: 8px 0 !important;
+     color: #000 !important;
+     line-height: 1;
+   }
+
+   /* Modal */
+   /*
+   .modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+    z-index: 10;
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 1rem 1.5rem;
+    width: 24rem;
+    border-radius: 0.5rem;
+}
+
+.close-button {
+    float: right;
+    width: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    background-color: lightgray;
+}
+
+.close-button:hover {
+    background-color: darkgray;
+}
+
+.show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+*/
+
+   
+   .content-image {
+     flex-basis: 50%;
+     text-align: center;
+     flex-grow: 1;
+     /* flex-shrink: 1; */
+     display: flex;
+     align-content: center;
+     justify-content: center;
+   }
+   
+   .content-image img {
+     width:100%;
+     margin:auto 0;
+   }
+   
+   .content-text {
+     flex-basis: 50%;
+     flex-grow: 1;
+     flex-shrink: 1;
+     padding: 0 24px;
+     box-sizing: border-box;
+   }
+   
+   .content-text h3 {
+     margin-left: 0 !important;
+     margin-right: 0;
+   }
+   
+   .content-text p {
+     margin-left: 0 !important;
+     margin-right: 0;
+   }
+   
+   .aboutme_container {
+     max-width: 1000px;
+     margin: 0 auto;
+     display: flex;
+     justify-content: center;
+     z-index: 2;
+     margin-bottom: 100px;
+   }
+   
+   .headshot {
+     position: absolute;
+     width: 230px;
+     height: 230px;
+     transform: translate(-235px, -35px);
+   }
+   
+   .aboutme_block {
+     padding: 40px 20px 40px 100px;
+   }
+   
+   .aboutme_block p {
+     display: block;
+     max-width: 300px;
+   }
+   
+   .about-me {
+     overflow-x: hidden;
+     box-sizing: border-box;
+   }
+   
+   .blob1 {
+     position: absolute;
+     z-index: -1;
+     height: 250px;
+     transform: translate(-240px, 55px);
+   }
+   
+   .blob2 {
+     position: absolute;
+     height: 200px;
+     transform: translate(276px, 120px);
+   }
+   
+   .blob3 {
+     position: absolute;
+     height: 200px;
+     transform: translate(280px, -100px);
+   }
+   
+   .experience {
+     max-width: 1000px;
+     margin: 0 auto;
+     display: flex;
+     justify-content: space-around;
+   }
+   
+   .program-experience {
+     width: 400px;
+   }
+   
+   .code-experience{
+     width: 400px;
+   }
+   
+   .logo-container {
+     display: flex;
+     flex-wrap: wrap;
+     flex-direction: row;
+   }
+   
+   .logo  {
+     text-align: center;
+     margin: 0 10px;
+     width: 80px;
+   }
+   
+   
+   .logo-container p {
+     text-align: center;
+   }
+
+   
+   
+   @media only screen and (max-width: 920px) {
+     .aboutme_block {
+       display: flex;
+       justify-content: center;
+       flex-direction: column;
+     }
+     .headshot {
+       position: static;
+       transform: translate(0,0);
+       margin: 0 auto;
+     }
+     .aboutme_block {
+       padding: 40px 40px 40px 40px;
+     }
+     .experience {
+       flex-direction: column;
+       justify-content: center;
+     }
+     .program-experience {
+       width: 100%;
+     }
+     .code-experience{
+       width: 100%;
+     }
+   }
+   
+   .contact-me {
+     padding: 2em;
+   }
+   
+   .contact-me .contact-container {
+     display: -webkit-box;
+     display: -ms-flexbox;
+     display: flex;
+     -webkit-box-orient: horizontal;
+     -webkit-box-direction: normal;
+         -ms-flex-direction: row;
+             flex-direction: row;
+     -webkit-box-pack: center;
+         -ms-flex-pack: center;
+             justify-content: center;
+   }
+   
+   .contact-me .contact-container .contact-info {
+     padding: 0 50px;
+   }
+   
+   .contact-me .contact-container .contact-form {
+     width: 500px;
+   }
+   
+   .contact-me .contact-container .contact-form li {
+     margin: 1em 0;
+     width: 400px;
+   }
+   
+   .contact-me .contact-container .contact-form li input {
+     width: 300px;
+     height: 20px;
+   }
+   
+   .contact-me .contact-container .contact-form li textarea {
+     resize: vertical;
+     width: 300px;
+   }
+   
+   
+   
+   @media only screen and (max-width: 1104px) {
+     .nav-container {
+       display: -webkit-box;
+       display: -ms-flexbox;
+       display: flex;
+     }
+     .nav-container nav {
+       display: none;
+     }
+     .nav-container .social-header {
+       display: none;
+     }
+     #menuToggle {
+      display: block;
+     }
+     .nav-container .hamburger-menu {
+       display: block;
+       -webkit-box-pack: end;
+           -ms-flex-pack: end;
+               justify-content: flex-end;
+     }
+     .nav-container .hamburger-menu img {
+       height: 20px;
+     }
+     .nav-container .hamburger-menu .hamburger-menu .open .hamburger-nav {
+       display: -webkit-box;
+       display: -ms-flexbox;
+       display: flex;
+     }
+   
+     .hamburger-menu {
+       display: flex !important;
+       flex-direction: column;
+       justify-content: center !important;
+     }
+   
+     .header {
+       padding: 10px 35px;
+     }
+   }
+   
+   .wave-motion {
+     position: absolute;
+     width: 100%;
+   }
+   
+   .orb-canvas {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100vw;
+     height: 100vh;
+     min-height: -webkit-fill-available;
+     pointer-events: none;
+     z-index: -1;
+   }
+   
+   
+   
+   .text-gradient {
+     background-image: linear-gradient(
+       45deg,
+       var(--base) 25%,
+       var(--complimentary2)
+     );
+     background-clip: inherit;
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+     -moz-background-clip: text;
+     -moz-text-fill-color: transparent;
+   }
+   
+   .overlay {
+     background: rgba(255, 255, 255, 0.6);
+     box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
+     border-radius: 2rem;
+     border: 1px solid rgba(255, 255, 255, 0.125);
+   }
+   
+   .hero .content {
+     display: flex;
+     flex-direction: column;
+     align-content: center;
+     justify-content: center;
+   }
+
+   footer{
+     
+   }
+
+   #mainCarousel {
+    width: 600px;
+    margin: 0 auto 1rem auto;
+  
+    --carousel-button-color: #170724;
+    --carousel-button-bg: #fff;
+    --carousel-button-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%),
+      0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
+  
+    --carousel-button-svg-width: 20px;
+    --carousel-button-svg-height: 20px;
+    --carousel-button-svg-stroke-width: 2.5;
+  }
+  
+  #mainCarousel .carousel__slide {
+    width: 100%;
+    padding: 0;
+  }
+  
+  #mainCarousel .carousel__button.is-prev {
+    left: -1.5rem;
+  }
+  
+  #mainCarousel .carousel__button.is-next {
+    right: -1.5rem;
+  }
+  
+  #mainCarousel .carousel__button:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px #A78BFA;
+  }
+   
+   /* Tablet Breakpoint */
+   @media only screen and (max-width: 1024px) {
+     .page-content {
+       margin: 0 72px;
+     }
+   }
+   
+   /* Mobile Breakpoint*/
+   @media only screen and (max-width: 767px) {
+     .page-content {
+       margin: 0 32px;
+     }
+   
+     h1 {
+       font-size: 40px !important;
+     }
+   
+     h2 {
+       font-size: 32px !important;
+     }
+     #rumate {
+       height: 580px !important;
+     }
+
+     #r4 {
+       height: 685px !important;
+     }
+
+     #thisWebsite {
+      height: 580px !important;
+     }
+
+     .box-content{
+       flex-direction: column;
+       padding: 36px;
+     }
+
+     .work .box {
+       height: 645px;
+     }
+   }
+   
+   
+   /*# sourceMappingURL=main.css.map */
+
+   [slide-in-from] {
+    opacity: 0;
+    transform: translateY(var(--translateY,0)) translateX(var(--translateX, 0));
+    animation: slideInFrom var(--sif-duration, 250ms) var(--sif-timing, ease-out) var(--sif-delay, 0ms) forwards;
+  }
+  [slide-in-from ^= "top"]    { --translateY: -100% }
+  [slide-in-from ^= "bottom"] { --translateY:  100% }
+  [slide-in-from $= "left"]   { --translateX: -100% }
+  [slide-in-from $= "right"]  { --translateX:  100% }
+  
+  @keyframes slideInFrom{ to {  transform: unset; opacity: unset } }
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .sr-only class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: " ";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /*
+   * Printing Tables:
+   * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
