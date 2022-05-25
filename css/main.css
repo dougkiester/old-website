@@ -377,6 +377,7 @@ textarea {
 }
    
    header {
+     display: none;
      position: absolute;
      box-sizing: border-box;
      width: 100%;
@@ -497,8 +498,9 @@ textarea {
    /* Work Section */
    
    #work {
-     padding: 2em;
+     /*padding: 2em;*/
      overflow: hidden;
+     margin-top: 2em;
    }
    
    #work .box {
@@ -660,7 +662,9 @@ textarea {
     transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }
 */
-
+  .logo p {
+    color: var(--bs-gray-600) !important;
+  }
    
    .content-image {
      flex-basis: 50%;
@@ -708,16 +712,16 @@ textarea {
      position: absolute;
      width: 230px;
      height: 230px;
-     transform: translate(-235px, -35px);
+     transform: translate(-235px,-52px);
    }
    
    .aboutme_block {
-     padding: 40px 20px 40px 100px;
+     padding: 72px 68px 72px 100px;
    }
    
    .aboutme_block p {
      display: block;
-     max-width: 300px;
+     max-width: 377px;
    }
    
    .about-me {
@@ -749,10 +753,16 @@ textarea {
      margin: 0 auto;
      display: flex;
      justify-content: space-around;
+     border: 2px dotted var(--bs-gray-800);
+     padding: 12px;
    }
    
    .program-experience {
      width: 400px;
+   }
+
+   .program-experience,.code-experience {
+     padding: 12px;
    }
    
    .code-experience{
@@ -774,6 +784,7 @@ textarea {
    
    .logo-container p {
      text-align: center;
+     margin-bottom: 12px;
    }
 
    
@@ -908,8 +919,8 @@ textarea {
    .text-gradient {
      background-image: linear-gradient(
        45deg,
-       var(--base) 25%,
-       var(--complimentary2)
+       hsl(197, 95%, 50% ) 25%,
+       hsl(287, 95%, 50%)
      );
      background-clip: inherit;
      -webkit-background-clip: text;
@@ -987,6 +998,22 @@ textarea {
    
      h2 {
        font-size: 32px !important;
+     }
+
+     h3{
+      font-size: 24px !important;
+     }
+
+     h4 {
+      font-size: 20px !important;
+     }
+
+     h5 {
+      font-size: 18px !important;
+     }
+
+     p{
+       font-size: 16px !important;
      }
      #rumate {
        height: 580px !important;
