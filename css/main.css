@@ -110,6 +110,7 @@ textarea {
      scroll-behavior: smooth;
      font-size: 100%;
      line-height: 1.75;
+     height: -webkit-fill-available;
    }
    
    body {
@@ -157,11 +158,10 @@ textarea {
    }
    
    .fullscreen-view {
-   /* min-height: 100vh;
-    height: 100vh;*/
-    height: calc(100vh - calc(100vh - 100%));
-    margin: 0px;
-     /*background-color: rgb(255, 255, 255);*/
+    height: 100vh;
+    height: 100vh;
+    position: relative;
+    height: -webkit-fill-available;
      
    }
    
