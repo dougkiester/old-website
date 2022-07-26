@@ -913,7 +913,12 @@ textarea {
      z-index: -1;
    }
    
-   
+   #canvas3d {
+    width: 100vw !important;
+    height: 100vh !important;
+    pointer-events: none;
+    z-index: -1;
+  }
    
    .text-gradient {
      background-image: linear-gradient(
