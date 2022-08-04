@@ -23,7 +23,16 @@
   <link rel="stylesheet" href="css/main.css">
 
   <meta name="theme-color" content="#fafafa">
-
+  <script>
+    // Initialise Carousel
+    const mainCarousel = new Carousel(document.querySelector("#mainCarousel"), {
+        Dots: false,
+        infinite: false,
+      });
+      const rumateCarousel = new Carousel(document.querySelector("#rumateCarousel"), {
+        
+      });
+  </script>
 
 </head>
 
@@ -248,9 +257,9 @@
                                   </button>
                                 </div>
                                 <div class="modal-body">
-                                  <div style="display: flex; flex-direction: row;">
+                                  <div class="rumate-description" style="display: flex; flex-direction: row;">
                                     <div style="flex-basis: 1;flex-shrink: 1;">
-                                      <img src="/Assets/macbook-pro-clay 1.png" style="max-width: 500px;padding: 0 24px;">
+                                      <img src="/Assets/macbook-pro-clay 1.png" style="max-width: 350px;padding: 0 24px;">
                                     </div>
                                     <div style="flex-basis: 1;">
                                       <h5 style="display: inline;">Rumate</h5><p> is a concept website created as part of Adobe XD Daily Creative Challenge. It is designed to make the daunting task of finding a roommate easy and personalized.</p>
