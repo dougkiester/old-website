@@ -234,10 +234,10 @@
             <div class="content">
 
                 
-                <div id="rumate" class="box" style="background: radial-gradient(circle, rgba(97,97,97,1) 0%, rgba(74,74,74,1) 100%);">
+                <div id="rumate" class="box scroll-element js-scroll fade-in" style="background: radial-gradient(circle, rgba(97,97,97,1) 0%, rgba(74,74,74,1) 100%);">
                     <div class="box-content">
                         <div class="content-image">
-                            <img src="/Assets/macbook-pro-clay 1.png" alt="Rumate Macbook Image" style="max-width: 497px;">
+                            <img src="/Assets/macbook-pro-clay 1.png" alt="Rumate Macbook Image" style="max-width: 497px;" class="js-scroll slide-left">
                         </div>
                         <div class="content-text">
                             <h3>Rumate</h3>
@@ -519,10 +519,10 @@
 
                 </div>-->
 
-                <div id="r4" class="box" style="background: radial-gradient(50% 50% at 50% 50%, #5BBB61 0%, #28A030 100%);">
+                <div id="r4" class="box scroll-element js-scroll fade-in" style="background: radial-gradient(50% 50% at 50% 50%, #5BBB61 0%, #28A030 100%);">
                     <div class="box-content">
                         <div class="content-image">
-                            <img src="/Assets/R4 Clay 1.png" alt="Rumate Macbook Image" style="filter: drop-shadow(0px 4px 16px rgba(0, 0, 0, 0.25));max-width: 497px;">
+                            <img src="/Assets/R4 Clay 1.png" alt="Rumate Macbook Image" style="filter: drop-shadow(0px 4px 16px rgba(0, 0, 0, 0.25));max-width: 497px;" class="js-scroll slide-left">
                         </div>
                         <div class="content-text">
                             <h3>R4</h3>
@@ -536,13 +536,7 @@
                         
                       </div>
                 </div>
-                <!--
-                <div id="myCarousel" class="carousel">
-                  <div class="carousel__slide"><img src="/Assets/portfolio r4.jpg"></div>
-                  <div class="carousel__slide"><img src="/Assets/portfolio r42.jpg"></div>
-                  <div class="carousel__slide"><img src="/Assets/portfolio r43.jpg"></div>
-                </div>
-                -->
+
                 <div id="mainCarousel" class="carousel w-10/12 max-w-xl mx-auto" style="display: none;">
                   <div
                     class="carousel__slide"
@@ -616,10 +610,10 @@
                   </div>
                 </div>
                 
-                <div id="thisWebsite" class="box" style="border: grey solid 4px;">
+                <div id="thisWebsite" class="box scroll-element js-scroll fade-in" style="border: grey solid 4px;">
                   <div class="box-content">
                       <div class="content-image">
-                        <img src="/Assets/macbook-pro-clay 5.png" alt="Rumate Macbook Image" style="max-width: 497px;">
+                        <img src="/Assets/macbook-pro-clay 5.png" alt="Rumate Macbook Image" style="max-width: 497px;" class="js-scroll slide-left">
                       </div>
                       <div class="content-text">
                           <h3 style="color: grey;">This Website!</h3>
@@ -643,61 +637,46 @@
     window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
     ga('create', 'UA-118864522-1', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview');
     
-    // Initialise Carousel
-    /*const mainCarousel = new Carousel(document.querySelector("#mainCarousel"), {
-        Dots: false,
-        infinite: false,
-      });
-    const rumateCarousel = new Carousel(document.querySelector("#rumateCarousel"), {
-      
-    });
-    
-    /*
-    const modal = document.querySelector(".modal");
-    const trigger = document.querySelector(".trigger");
-    const closeButton = document.querySelector(".close-button");
-    
-    const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
-    const body = document.body;
-    
+    const scrollElements = document.querySelectorAll(".js-scroll");
 
+    const elementInView = (el, dividend = 1) => {
+      const elementTop = el.getBoundingClientRect().top;
 
-    function toggleModal() {
-        modal.classList.toggle("show-modal");
-    }
+      return (
+        elementTop <=
+        (window.innerHeight || document.documentElement.clientHeight) / dividend
+      );
+    };
 
-    function windowOnClick(event) {
-        if (event.target === modal) {
-            toggleModal();
+    const elementOutofView = (el) => {
+      const elementTop = el.getBoundingClientRect().top;
+
+      return (
+        elementTop > (window.innerHeight || document.documentElement.clientHeight)
+      );
+    };
+
+    const displayScrollElement = (element) => {
+      element.classList.add("scrolled");
+    };
+
+    const hideScrollElement = (element) => {
+      element.classList.remove("scrolled");
+    };
+
+    const handleScrollAnimation = () => {
+      scrollElements.forEach((el) => {
+        if (elementInView(el, 1.25)) {
+          displayScrollElement(el);
+        } else if (elementOutofView(el)) {
+          hideScrollElement(el)
         }
+      })
     }
 
-    function modalOpen() {
-      document.body.style.top = `-${window.scrollY}px`;
-      document.body.style.position = 'fixed';
-      
-    }
-
-    function modalClosed() {
-      const scrollY = document.body.style.top;
-      document.body.style.position = '';
-      document.body.style.top = '';
-      
-      const body = document.body;
-      body.style.position = '';
-      body.style.top = '';
-      window.scrollTo(0, parseInt(scrollY || '0') * -1);  
-    }
-
-    trigger.addEventListener("click", toggleModal);
-    trigger.addEventListener("click", modalOpen);
-    closeButton.addEventListener("click", toggleModal);
-    closeButton.addEventListener("click", modalClosed);
-    window.addEventListener("click", windowOnClick);
-    window.addEventListener('scroll', () => {
-        document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
+    window.addEventListener("scroll", () => { 
+      handleScrollAnimation();
     });
-   */
   </script>
 
   <script src="https://www.google-analytics.com/analytics.js" async></script>
